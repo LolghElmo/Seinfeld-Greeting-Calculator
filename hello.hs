@@ -1,5 +1,7 @@
           import Data.List (isPrefixOf, words, unwords)
           import Data.Char (toLower, isSpace)
+          
+          --Process String Function
           processString :: String -> Int
           processString str
               | "hello" `isPrefixOf` lowerStr = 0
@@ -7,6 +9,8 @@
               | otherwise = 100
             where
               lowerStr = map toLower (dropWhile isSpace str)
+              
+          -- Main Function
           main :: IO ()
           main = loop
             where
